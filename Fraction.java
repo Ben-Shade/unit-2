@@ -27,37 +27,44 @@ public class Fraction
          return denominator;
     }
     
-    public String toString()
+    public String toString(int Fraction)
     {
-        return numerator + "/" + denominator;
+        return Integer.toString(Fraction);
     }
     
-    public int add(Fraction input, Fraction standard)
+    public String add(Fraction input, Fraction standard)
     {
-        String Addition = (input.getNum() * standard.getDen() + standard.getNum() * input.getDen())+ "/" + (standard.getDen() * input.getDen()); 
-        int intAddition = Integer.parseInt(Addition);
-        return intAddition;
+        int AdditionNum = (input.getNum() * standard.getDen() + standard.getNum() * input.getDen()); 
+        int AdditionDen = (standard.getDen() * input.getDen());
+        String StringAdd = toString(AdditionNum) + "/" + toString(AdditionDen);
+        return StringAdd;
     }
     
-    public int subtr(Fraction input , Fraction standard)
+    public String subtr(Fraction input , Fraction standard)
     {
-        String Subtraction = (input.getNum() * standard.getDen() - standard.getNum() * input.getDen())+ "/" + (standard.getDen() * input.getDen()); 
-        int intSubtraction = Integer.parseInt(Subtraction);
-        return intSubtraction;
+        int SubtractionNum = (input.getNum() * standard.getDen() - standard.getNum() * input.getDen()); 
+        int SubtractionDen = (standard.getDen() * input.getDen()); 
+        
+        String StringSubtr = toString(SubtractionNum) + "/" + toString(SubtractionDen);
+        return StringSubtr;
     }
     
-    public int mult(Fraction input , Fraction standard)
+    public String mult(Fraction input , Fraction standard)
     {
-        String Multiplication = (input.getNum() * standard.getNum())+ "/" + (standard.getDen() * input.getDen()); 
-        int intMultiplication = Integer.parseInt(Multiplication);
-        return intMultiplication;
+        int MultiplicationNum = (input.getNum() * standard.getNum()); 
+        int MultiplicationDen = (standard.getDen() * input.getDen()); 
+        
+        String StringMult = toString(MultiplicationNum) + "/" + toString(MultiplicationDen);
+        return StringMult;
     }
     
-    public int div(Fraction input , Fraction standard)
+    public String div(Fraction input , Fraction standard)
     {
-        String Division = (input.getNum() * standard.getDen())+ "/" + (standard.getNum() * input.getDen()); 
-        int intDivision = Integer.parseInt(Division);
-        return intDivision;
+        int DivisionNum = (input.getNum() * standard.getDen());
+        int DivisionDen = (standard.getNum() * input.getDen()); 
+         
+        String StringDiv = toString(DivisionNum) + "/" + toString(DivisionDen);
+        return StringDiv;
     }
     
     public static void main(String [] args)
@@ -66,8 +73,9 @@ public class Fraction
         Fraction one_half = new Fraction(1,2);
         Fraction one_thrid = new Fraction(1,3);
         System.out.println(one_half.add(one_half,OtherFraction()));
-        
+        System.out.println(one_half.subtr(one_half,OtherFraction()));
+        System.out.println(one_half.mult(one_half,OtherFraction()));
+        System.out.println(one_half.div(one_half,OtherFraction()));
 
     }
 }
-
