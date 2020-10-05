@@ -32,36 +32,37 @@ public class Fraction
         return Integer.toString(Fraction);
     }
     
-    public String add(Fraction input, Fraction standard)
+    public String add(Fraction standard)
     {
-        int AdditionNum = (input.getNum() * standard.getDen() + standard.getNum() * input.getDen()); 
-        int AdditionDen = (standard.getDen() * input.getDen());
+        int AdditionNum = (numerator * standard.getDen() + standard.getNum() * denominator); 
+        int AdditionDen = (standard.getDen() * denominator);
+        
         String StringAdd = toString(AdditionNum) + "/" + toString(AdditionDen);
         return StringAdd;
     }
     
-    public String subtr(Fraction input , Fraction standard)
+    public String subtr(Fraction standard)
     {
-        int SubtractionNum = (input.getNum() * standard.getDen() - standard.getNum() * input.getDen()); 
-        int SubtractionDen = (standard.getDen() * input.getDen()); 
+        int SubtractionNum = (numerator * standard.getDen() - standard.getNum() * denominator); 
+        int SubtractionDen = (standard.getDen() * denominator); 
         
         String StringSubtr = toString(SubtractionNum) + "/" + toString(SubtractionDen);
         return StringSubtr;
     }
     
-    public String mult(Fraction input , Fraction standard)
+    public String mult(Fraction standard)
     {
-        int MultiplicationNum = (input.getNum() * standard.getNum()); 
-        int MultiplicationDen = (standard.getDen() * input.getDen()); 
+        int MultiplicationNum = (numerator * standard.getNum()); 
+        int MultiplicationDen = (standard.getDen() * denominator); 
         
         String StringMult = toString(MultiplicationNum) + "/" + toString(MultiplicationDen);
         return StringMult;
     }
     
-    public String div(Fraction input , Fraction standard)
+    public String div(Fraction standard)
     {
-        int DivisionNum = (input.getNum() * standard.getDen());
-        int DivisionDen = (standard.getNum() * input.getDen()); 
+        int DivisionNum = (numerator * standard.getDen());
+        int DivisionDen = (standard.getNum() * denominator); 
          
         String StringDiv = toString(DivisionNum) + "/" + toString(DivisionDen);
         return StringDiv;

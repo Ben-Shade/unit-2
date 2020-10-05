@@ -25,24 +25,24 @@ public class Test
         Fraction one_third = new Fraction(1,3);
         Fraction one_fourth = new Fraction(1,4);
         
-        System.out.println(input.add(one_half,input));
-        System.out.println(input.subtr(one_half,input));
-        System.out.println(input.mult(one_half,input));
-        System.out.println(input.div(one_half,input));
+        System.out.println(input.add(one_half));
+        System.out.println(input.subtr(one_half));
+        System.out.println(input.mult(one_half));
+        System.out.println(input.div(one_half));
         
         System.out.println(" ");
         
-        System.out.println(one_half.add(one_half,one_third));
-        System.out.println(one_half.subtr(one_half,one_third));
-        System.out.println(one_half.mult(one_half,one_third));
-        System.out.println(one_half.div(one_half,one_third));
+        System.out.println(one_half.add(one_third));
+        System.out.println(one_half.subtr(one_third));
+        System.out.println(one_half.mult(one_third));
+        System.out.println(one_half.div(one_third));
         
         System.out.println(" ");
         
-        System.out.println(one_third.add(one_third, one_fourth));
-        System.out.println(one_third.subtr(one_third, one_fourth));
-        System.out.println(one_third.mult(one_third, one_fourth));
-        System.out.println(one_third.div(one_third, one_fourth));
+        System.out.println(one_third.add(one_third));
+        System.out.println(one_third.subtr(one_fourth));
+        System.out.println(one_third.mult(one_fourth));
+        System.out.println(one_third.div(one_fourth));
         
         System.out.println(" ");
 
