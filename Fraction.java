@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 public class Fraction
 {
     // instance variables - replace the example below with your own
@@ -14,7 +14,7 @@ public class Fraction
     
     public static Fraction OtherFraction()
     {
-        return new Fraction(1,3);
+        return new Fraction(1,1);
     }
     
     public int getNum()
@@ -67,15 +67,7 @@ public class Fraction
         return StringDiv;
     }
     
-    public static void main(String [] args)
-    {
-         
-        Fraction one_half = new Fraction(1,2);
-        Fraction one_thrid = new Fraction(1,3);
-        System.out.println(one_half.add(one_half,OtherFraction()));
-        System.out.println(one_half.subtr(one_half,OtherFraction()));
-        System.out.println(one_half.mult(one_half,OtherFraction()));
-        System.out.println(one_half.div(one_half,OtherFraction()));
-
-    }
+    
 }
+
+
